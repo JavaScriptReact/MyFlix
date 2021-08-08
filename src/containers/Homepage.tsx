@@ -20,7 +20,7 @@ function Homepage() {
     <Block
      heading="Enjoy on your TV."
      content="Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more."
-     image="https://myflix-server.herokuapp.com/tv.png"
+     image="https://myflix-server.herokuapp.com/images/tv.png"
     />
    </section>
    <section className="block-2 block" style={{flexDirection:"row-reverse"}}>
