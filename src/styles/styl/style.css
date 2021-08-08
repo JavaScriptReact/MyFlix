@@ -1,0 +1,243 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  width: 100vw;
+  overflow: hidden;
+  background: black;
+}
+
+body .page {
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: auto;
+}
+
+.parallax {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  pointer-events: scroll;
+}
+
+.parallax div {
+  z-index: 4;
+  height: 300vh;
+}
+
+.parallax::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar {
+  height: 100vh;
+  width: 10px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.scrollbar .thumb {
+  width: 100%;
+  height: 0px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: red;
+  -webkit-box-shadow: inset 0 0 5px black;
+          box-shadow: inset 0 0 5px black;
+}
+
+nav {
+  height: 60px;
+  width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 100;
+}
+
+nav h1 {
+  font-size: 40px;
+  color: red;
+  font-weight: bold;
+}
+
+nav button {
+  color: white;
+  font-weight: bold;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.screen-1 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(0, 0, 0, 0.8)), color-stop(40%, rgba(0, 0, 0, 0)), color-stop(75%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.8)));
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.screen-1 .filter {
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  background: black;
+  opacity: 0.5;
+}
+
+.screen-1 .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.screen-1 .content h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.screen-1 .content h2 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.screen-1 .content h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.screen-1 .content .sign {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.screen-1 .content .sign input {
+  width: 70%;
+  height: 40px;
+  padding: 5px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+  z-index: 100;
+}
+
+.screen-1 .content .sign button {
+  background: red;
+  color: white;
+  outline: none;
+  width: 30%;
+  border: solid 1px red;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.screen-1 .content .sign button:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.tv {
+  height: 450px;
+  width: 100vw;
+  border-bottom: solid 6px #413f3f;
+  border-top: solid 6px #413f3f;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.tv .content {
+  font-family: sans-serif;
+  text-align: left;
+  width: 500px;
+}
+
+.tv .content h1 {
+  font-size: 50px;
+}
+
+.tv .content h2 {
+  font-size: 26px;
+}
+
+.tv img {
+  height: 90%;
+}
+
+.block {
+  height: 450px;
+  width: 100vw;
+  border-bottom: solid 6px #413f3f;
+  border-top: solid 6px #413f3f;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.block .content {
+  font-family: sans-serif;
+  text-align: left;
+  width: 500px;
+}
+
+.block .content h1 {
+  font-size: 50px;
+}
+
+.block .content h2 {
+  font-size: 26px;
+}
+
+.block img {
+  height: 90%;
+}
+/*# sourceMappingURL=style.css.map */
